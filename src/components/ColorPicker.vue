@@ -2,7 +2,7 @@
   <!-- <div style="position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 100" ref="fixedEl"></div> -->
 
   <div onselectstart="return false">
-    <div class="cbtn" @click="isShowPanel = !isShowPanel" ref="cbtnEl">
+    <div class="cbtn" @click="togglePanel" ref="cbtnEl">
       <div class="cbtn-inner" :style="{ background: previewBackground }"></div>
     </div>
 
@@ -449,6 +449,24 @@ function setPickerPos() {
     opacityPickerEl.value.style.left = (barWidth - 9) * paletteColor.a - 3 + 'px'
   }
 }
+
+function togglePanel() {
+  isShowPanel.value = !isShowPanel.value
+}
+
+function openPanel() {
+  isShowPanel.value = true
+}
+
+function closePanel() {
+  isShowPanel.value = false
+}
+
+defineExpose({
+  openPanel,
+  closePanel,
+  togglePanel,
+})
 </script>
 
 <style lang="scss" scoped>
