@@ -8,39 +8,50 @@
 
     <div class="panel" v-show="isShowPanel" ref="panelEl" @contextmenu.prevent="bindContext">
       <div class="activeMode-wrapper">
-        <div class="btn-activeMode solid" :class="activeMode === 'solid' ? '' : 'gray'" @click.stop="changeMode('solid')"></div>
-        <div class="btn-activeMode linear" :class="activeMode === 'linear' ? '' : 'gray'" @click.stop="changeMode('linear')"></div>
-        <div class="btn-activeMode radial" :class="activeMode === 'radial' ? '' : 'gray'" @click.stop="changeMode('radial')"></div>
+        <div v-for="mode in supportedModes" class="btn-activeMode" :class="[mode, { gray: activeMode !== mode }]"
+          @click.stop="changeMode(mode)"></div>
       </div>
       <div class="grad-wrapper" :style="activeMode === 'solid' ? 'display:none' : ''">
-        <div class="grad-bar" ref="gradBarEl" :style="{ backgroundImage: gradPreviewColor }" @click.stop="addGradPicker()">
-          <div v-for="(item, index) in gradColors" :key="item.id" style="top: -1px" class="picker" :class="index == activeGradPickerIndex ? 'on' : ''" @click.stop="getGradPickerPos($event.target, index)" @mousedown.stop="bindDown($event.target, getGradPickerPos, index)"></div>
+        <div class="grad-bar" ref="gradBarEl" :style="{ backgroundImage: gradPreviewColor }"
+          @click.stop="addGradPicker()">
+          <div v-for="(item, index) in gradColors" :key="item.id" style="top: -1px" class="picker"
+            :class="index == activeGradPickerIndex ? 'on' : ''" @click.stop="getGradPickerPos($event.target, index)"
+            @mousedown.stop="bindDown($event.target, getGradPickerPos, index)"></div>
         </div>
         <div class="flex-row" :style="activeMode === 'linear' ? '' : 'visibility:hidden'">
-          <div class="degree" ref="degreeEl" @click.stop="getDegreePickerPos" @mousedown.stop="bindDown($event, getDegreePickerPos)">
+          <div class="degree" ref="degreeEl" @click.stop="getDegreePickerPos"
+            @mousedown.stop="bindDown($event, getDegreePickerPos)">
             <div class="picker-deg" ref="degreePickerEl" @mousedown.stop="bindDown($event, getDegreePickerPos)"></div>
           </div>
           <div style="font-size: 10px; width: 36px; padding-left: 8px">{{ degree }}°</div>
         </div>
       </div>
       <div class="palette-wrapper">
-        <div class="palette" ref="paletteEl" @click.stop="getPalettePickerPos" @mousedown.stop="bindDown($event, getPalettePickerPos)">
+        <div class="palette" ref="paletteEl" @click.stop="getPalettePickerPos"
+          @mousedown.stop="bindDown($event, getPalettePickerPos)">
           <div class="white"></div>
           <div class="black"></div>
           <div class="picker" ref="palettePickerEl" @mousedown.stop="bindDown($event, getPalettePickerPos)"></div>
         </div>
       </div>
       <div class="huebar-wrapper">
-        <div class="dropper" @click="dropColor" style="cursor: pointer" :style="isDropperEnabled ? '' : 'opacity: 50%;cursor:default'"></div>
+        <div class="dropper" @click="dropColor" style="cursor: pointer"
+          :style="isDropperEnabled ? '' : 'opacity: 50%;cursor:default'"></div>
         <div class="bar-wrapper">
-          <div class="hue-bar" ref="hueBarEl" @click.stop="getHuePickerPos" @mousedown.stop="bindDown($event, getHuePickerPos)">
-            <div class="picker" ref="huePickerEl" style="top: -1px" @mousedown.stop="bindDown($event, getHuePickerPos)"></div>
+          <div class="hue-bar" ref="hueBarEl" @click.stop="getHuePickerPos"
+            @mousedown.stop="bindDown($event, getHuePickerPos)">
+            <div class="picker" ref="huePickerEl" style="top: -1px" @mousedown.stop="bindDown($event, getHuePickerPos)">
+            </div>
           </div>
-          <div class="opacity-bar" ref="opactiyBarEl" @click.stop="getOpacityPickerPos" @mousedown.stop="bindDown($event, getOpacityPickerPos)">
-            <div class="picker" ref="opacityPickerEl" style="top: -1px" @click.stop="getOpacityPickerPos" @mousedown.stop="bindDown($event, getOpacityPickerPos)"></div>
+          <div class="opacity-bar" ref="opactiyBarEl" @click.stop="getOpacityPickerPos"
+            @mousedown.stop="bindDown($event, getOpacityPickerPos)">
+            <div class="picker" ref="opacityPickerEl" style="top: -1px" @click.stop="getOpacityPickerPos"
+              @mousedown.stop="bindDown($event, getOpacityPickerPos)"></div>
           </div>
         </div>
-        <div class="preview-wrapper"><div class="preview-color" :style="{ background: previewColor }"></div></div>
+        <div class="preview-wrapper">
+          <div class="preview-color" :style="{ background: previewColor }"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -61,6 +72,11 @@ const props = defineProps({
     type: String,
     required: false,
     default: 'solid',
+  },
+  supportedModes: {
+    type: Array,
+    required: false,
+    default: () => ['solid', 'linear', 'radial'],
   },
   degree: {
     type: Number,
@@ -448,6 +464,7 @@ function setPickerPos() {
   height: 40px;
   padding: 6px;
 }
+
 .cbtn-inner {
   background: #dcdfe6;
   width: 100%;
@@ -485,6 +502,7 @@ function setPickerPos() {
     border-bottom: 6px solid #ffffff;
   }
 }
+
 .activeMode-wrapper {
   border-bottom: 1px solid #dcdfe6;
   height: 40px;
@@ -493,6 +511,7 @@ function setPickerPos() {
   align-items: center;
   padding-left: 12px;
 }
+
 .btn-activeMode {
   border: 1px solid #ff7d3a;
   margin-right: 12px;
@@ -500,28 +519,35 @@ function setPickerPos() {
   width: 14px;
   height: 14px;
   cursor: pointer;
+
   &.solid {
     background: #ffc9b6;
+
     &.gray {
       border: 1px solid #7d7d7d;
       background: #e2e2e2;
     }
   }
+
   &.linear {
     background: linear-gradient(180deg, #ffc9b6, #ff5011);
+
     &.gray {
       border: 1px solid #7d7d7d;
       background: linear-gradient(180deg, #ffffff, #999999);
     }
   }
+
   &.radial {
     background-image: radial-gradient(circle, #ffc9b6, #ff5011);
+
     &.gray {
       border: 1px solid #7d7d7d;
       background: radial-gradient(circle, #ffffff, #999999);
     }
   }
 }
+
 .palette-wrapper {
   margin: 10px;
   height: 140px;
@@ -529,17 +555,20 @@ function setPickerPos() {
   border: 1px solid #dcdfe6;
   border-radius: 4px;
 }
+
 .palette {
   position: absolute;
   overflow: hidden;
   inset: 0px;
   border-radius: 4px;
   background: rgb(255, 0, 0);
+
   .white {
     position: absolute;
     inset: 0px;
     background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   }
+
   .black {
     position: absolute;
     inset: 0px;
@@ -553,6 +582,7 @@ function setPickerPos() {
   height: 14px;
   top: -4px;
   left: -4px;
+
   &::before {
     content: '';
     top: 3px;
@@ -566,22 +596,26 @@ function setPickerPos() {
     border-radius: 50%;
     cursor: default;
   }
+
   &.on::before {
     box-shadow: 0 0 0 1px #979797, 0 0 0 3px #f50, 0 0 0 4px #979797;
   }
 }
+
 .dropper {
   width: 25px;
   height: 30px;
   background: url('../assets/img/dropper@2x.png') center center no-repeat;
   background-size: 25px;
 }
+
 .grad-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 10px 10px 0 10px;
+
   .grad-bar {
     border: 1px solid #aaaaaa;
     border-radius: 8px;
@@ -599,6 +633,7 @@ function setPickerPos() {
   width: 20px;
   height: 20px;
 }
+
 .picker-deg {
   border: 1px solid #aaaaaa;
   border-radius: 5px;
@@ -620,6 +655,7 @@ function setPickerPos() {
     justify-content: space-between;
     height: 30px;
   }
+
   .hue-bar,
   .opacity-bar {
     border: 1px solid #aaaaaa;
@@ -627,14 +663,17 @@ function setPickerPos() {
     width: 150px;
     height: 12px;
   }
+
   .hue-bar {
     background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
   }
+
   .opacity-bar {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%), url('../assets/img/optmask.png');
     background-size: auto 100%;
   }
 }
+
 .preview-wrapper {
   width: 30px;
   height: 30px;
@@ -643,6 +682,7 @@ function setPickerPos() {
   background-image: url('../assets/img/optmask.png');
   background-size: 50% 50%;
 }
+
 .preview-color {
   width: 28px;
   height: 28px;
