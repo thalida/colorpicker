@@ -2,11 +2,11 @@
   <!-- <div style="position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 100" ref="fixedEl"></div> -->
 
   <div onselectstart="return false">
-    <div class="cbtn" @click="togglePanel" ref="cbtnEl">
+    <div v-if="!showPanelOnly" class="cbtn" @click="togglePanel" ref="cbtnEl">
       <div class="cbtn-inner" :style="{ background: previewBackground }"></div>
     </div>
 
-    <div class="panel" v-show="isShowPanel" ref="panelEl" @contextmenu.prevent="bindContext">
+    <div class="panel" v-show="showPanelOnly || isShowPanel" ref="panelEl" @contextmenu.prevent="bindContext">
       <div class="activeMode-wrapper">
         <div v-for="mode in supportedModes" class="btn-activeMode" :class="[mode, { gray: activeMode !== mode }]"
           @click.stop="changeMode(mode)"></div>
@@ -104,6 +104,11 @@ const props = defineProps({
     type: Boolean,
     required: false,
     default: true,
+  },
+  showPanelOnly: {
+    type: Boolean,
+    required: false,
+    default: false,
   },
 })
 

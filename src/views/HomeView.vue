@@ -4,6 +4,8 @@
     @colorChanged="changed" :showOpacityPicker="false" />
   <ColorPicker ref="colorPickerRef" style="margin: 50px" mode="solid" :supportedModes="['linear', 'solid']" :degree="45"
     :gradients="g" @colorChanged="changed" :showOpacityPicker="false" />
+  <ColorPicker style="margin: 50px" mode="solid" :supportedModes="['linear', 'solid']" :degree="45" :gradients="g"
+    @colorChanged="changed" :showOpacityPicker="false" :showPanelOnly="true" />
 </template>
 
 <script setup>
