@@ -43,7 +43,7 @@
             <div class="picker" ref="huePickerEl" style="top: -1px" @mousedown.stop="bindDown($event, getHuePickerPos)">
             </div>
           </div>
-          <div class="opacity-bar" ref="opactiyBarEl" @click.stop="getOpacityPickerPos"
+          <div v-if="showOpacityPicker" class="opacity-bar" ref="opactiyBarEl" @click.stop="getOpacityPickerPos"
             @mousedown.stop="bindDown($event, getOpacityPickerPos)">
             <div class="picker" ref="opacityPickerEl" style="top: -1px" @click.stop="getOpacityPickerPos"
               @mousedown.stop="bindDown($event, getOpacityPickerPos)"></div>
@@ -73,11 +73,6 @@ const props = defineProps({
     required: false,
     default: 'solid',
   },
-  supportedModes: {
-    type: Array,
-    required: false,
-    default: () => ['solid', 'linear', 'radial'],
-  },
   degree: {
     type: Number,
     required: false,
@@ -99,6 +94,16 @@ const props = defineProps({
         { percent: 100, color: { r: 0, g: 0, b: 0, a: 1 } },
       ]
     },
+  },
+  supportedModes: {
+    type: Array,
+    required: false,
+    default: () => ['solid', 'linear', 'radial'],
+  },
+  showOpacityPicker: {
+    type: Boolean,
+    required: false,
+    default: true,
   },
 })
 
@@ -439,7 +444,10 @@ function setPickerPos() {
   palettePickerEl.value.style.left = (paletteWidth / 100) * paletteColor.s - 6 + 'px'
   palettePickerEl.value.style.top = paletteHeight - (paletteHeight / 100) * paletteColor.b - 6 + 'px'
   huePickerEl.value.style.left = ((barWidth - 9) / 360) * paletteColor.h - 3 + 'px'
-  opacityPickerEl.value.style.left = (barWidth - 9) * paletteColor.a - 3 + 'px'
+
+  if (props.showOpacityPicker.value) {
+    opacityPickerEl.value.style.left = (barWidth - 9) * paletteColor.a - 3 + 'px'
+  }
 }
 </script>
 
@@ -653,7 +661,7 @@ function setPickerPos() {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 30px;
+    gap: 5px;
   }
 
   .hue-bar,

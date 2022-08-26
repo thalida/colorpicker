@@ -1,7 +1,7 @@
 <template>
   <ColorPicker style="margin: 50px" mode="solid" :degree="45" :gradients="g" @colorChanged="changed" />
   <ColorPicker style="margin: 50px" mode="solid" :supportedModes="['linear', 'solid']" :degree="45" :gradients="g"
-    @colorChanged="changed" />
+    @colorChanged="changed" :showOpacityPicker="false" />
 </template>
 
 <script setup>
