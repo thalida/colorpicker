@@ -506,6 +506,7 @@ defineExpose({
   position: absolute;
   background: #fff;
   top: 45px;
+  left: 0;
   width: 240px;
   border: 1px solid #dcdfe6;
   border-radius: 6px;
