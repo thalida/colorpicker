@@ -13,12 +13,12 @@
       </div>
       <div class="grad-wrapper" :style="activeMode === 'solid' ? 'display:none' : ''">
         <div class="grad-bar" ref="gradBarEl" :style="{ backgroundImage: gradPreviewColor }"
-          @click.stop="addGradPicker()">
+          :class="{ 'full-width': !showDegreePicker }" @click.stop="addGradPicker()">
           <div v-for="(item, index) in gradColors" :key="item.id" style="top: -1px" class="picker"
             :class="index == activeGradPickerIndex ? 'on' : ''" @click.stop="getGradPickerPos($event.target, index)"
             @mousedown.stop="bindDown($event.target, getGradPickerPos, index)"></div>
         </div>
-        <div class="flex-row" :style="activeMode === 'linear' && showDegreePicker ? '' : 'visibility:hidden'">
+        <div class="flex-row" v-if="showDegreePicker" :style="activeMode === 'linear' ? '' : 'visibility:hidden'">
           <div class="degree" ref="degreeEl" @click.stop="getDegreePickerPos"
             @mousedown.stop="bindDown($event, getDegreePickerPos)">
             <div class="picker-deg" ref="degreePickerEl" @mousedown.stop="bindDown($event, getDegreePickerPos)"></div>
@@ -155,6 +155,7 @@ if (g.length > 0) {
 let isDragging = false
 let paletteWidth = 216
 let paletteHeight = 138
+let gradBarWidth = props.showDegreePicker ? 150 : paletteWidth
 let barWidth = 150
 let gradMaxId = 0
 //Eye Dropper (only supports Google Chrome version 95 and above)
@@ -192,7 +193,11 @@ function changeMode(mode) {
   activeMode.value = mode
   if (activeMode.value !== 'solid') {
     setGradPickerPos()
-    setDegreeHanderPos()
+
+    if (props.showDegreePicker.value) {
+      setDegreePickerPos()
+    }
+
     const c = gradColors.value[activeGradPickerIndex.value].color
     paletteColor.h = c.h
     paletteColor.s = c.s
@@ -318,9 +323,9 @@ function delGradPicker() {
 function getGradPickerPos(el, index) {
   const elPos = getElPos(gradBarEl.value)
   const mousePos = getMousePos()
-  let left = Math.max(-3, Math.min(barWidth - 12, mousePos.x - elPos.left - 6))
+  let left = Math.max(-3, Math.min(gradBarWidth - 12, mousePos.x - elPos.left - 6))
   el.style.left = left + 'px'
-  gradColors.value[index].percent = ((left + 3) / (barWidth - 9)) * 100
+  gradColors.value[index].percent = ((left + 3) / (gradBarWidth - 9)) * 100
   activeGradPickerIndex.value = index
   const c = gradColors.value[index].color
   paletteColor.h = c.h
@@ -334,7 +339,7 @@ function getGradPickerPos(el, index) {
 
 function setGradPickerPos() {
   gradColors.value.forEach((item, index) => {
-    gradBarEl.value.children[index].style.left = ((barWidth - 9) / 100) * item.percent - 3 + 'px'
+    gradBarEl.value.children[index].style.left = ((gradBarWidth - 9) / 100) * item.percent - 3 + 'px'
   })
 }
 
@@ -661,6 +666,10 @@ defineExpose({
     background-image: url('../assets/img/optmask.png');
     background-size: auto 100%;
     display: absolute;
+
+    &.full-width {
+      width: 100%;
+    }
   }
 }
 

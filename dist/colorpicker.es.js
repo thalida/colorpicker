@@ -92,7 +92,7 @@ let Utils = {
   }
 };
 var maskImgUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC";
-var ColorPicker_vue_vue_type_style_index_0_scoped_true_lang = /* @__PURE__ */ (() => '.flex-row[data-v-686735cf]{display:flex;flex-direction:row;align-items:center}.flex-column[data-v-686735cf]{display:flex;flex-direction:column;align-items:center}.cbtn[data-v-686735cf]{border:1px solid #dcdfe6;background:#ffffff;border-radius:4px;width:40px;height:40px;padding:6px}.cbtn-inner[data-v-686735cf]{background:#dcdfe6;width:100%;height:100%}.panel[data-v-686735cf]{position:absolute;background:#fff;top:45px;left:0;width:240px;border:1px solid #dcdfe6;border-radius:6px;z-index:1000}.panel[data-v-686735cf]:before{content:"";display:block;position:absolute;top:-6px;left:10px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #dcdfe6}.panel[data-v-686735cf]:after{content:"";display:block;position:absolute;top:-5px;left:10px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #ffffff}.activeMode-wrapper[data-v-686735cf]{border-bottom:1px solid #dcdfe6;height:40px;display:flex;flex-direction:row;align-items:center;padding-left:12px}.btn-activeMode[data-v-686735cf]{border:1px solid #ff7d3a;margin-right:12px;border-radius:50%;width:14px;height:14px;cursor:pointer}.btn-activeMode.solid[data-v-686735cf]{background:#ffc9b6}.btn-activeMode.solid.gray[data-v-686735cf]{border:1px solid #7d7d7d;background:#e2e2e2}.btn-activeMode.linear[data-v-686735cf]{background:linear-gradient(180deg,#ffc9b6,#ff5011)}.btn-activeMode.linear.gray[data-v-686735cf]{border:1px solid #7d7d7d;background:linear-gradient(180deg,#ffffff,#999999)}.btn-activeMode.radial[data-v-686735cf]{background-image:radial-gradient(circle,#ffc9b6,#ff5011)}.btn-activeMode.radial.gray[data-v-686735cf]{border:1px solid #7d7d7d;background:radial-gradient(circle,#ffffff,#999999)}.palette-wrapper[data-v-686735cf]{margin:10px;height:140px;position:relative;border:1px solid #dcdfe6;border-radius:4px}.palette[data-v-686735cf]{position:absolute;overflow:hidden;inset:0px;border-radius:4px;background:rgb(255,0,0)}.palette .white[data-v-686735cf]{position:absolute;inset:0px;background:linear-gradient(to right,#fff,rgba(255,255,255,0))}.palette .black[data-v-686735cf]{position:absolute;inset:0px;background:linear-gradient(to top,#000,rgba(0,0,0,0))}.picker[data-v-686735cf]{position:absolute;width:14px;height:14px;top:-4px;left:-4px}.picker[data-v-686735cf]:before{content:"";top:3px;left:3px;position:absolute;width:6px;height:6px;display:block;background:rgba(255,255,255,0);box-shadow:0 0 0 1px #979797,0 0 0 3px #fff,0 0 0 4px #979797;border-radius:50%;cursor:default}.picker.on[data-v-686735cf]:before{box-shadow:0 0 0 1px #979797,0 0 0 3px #f50,0 0 0 4px #979797}.dropper[data-v-686735cf]{width:25px;height:30px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAyCAYAAAATIfj2AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAANKADAAQAAAABAAAAMgAAAADS/xijAAAEnklEQVRoBe2Yz0sVURTH73u+J/4WDX+kaIJmCGlKUrTqF4WbpD9Ac6H5A6KCiGwRBS6yVtnGH+DC2rU0F0KUtTSMRAPJDKmHpUiKPxea2vc7vivzHjPzrr6RnjAXxjtz59y553POueeepxBOcyzgWMCxgGOBA2QBVyTp2t3dnbi+vv4AOp336/U+ISGhpaqqalFVz4gB6ujoOLq1tfUGih/RK+9yuX56vd7LtbW1X/XjZvcRAeSHeQ8ls5KTk0VBQYGm78TEhFhYWBCA+g2o8ypQ/x1ID5OSkiKKi4tFVFSUBrS5uSlGRkbE/Pw8oX4i/IpDhZ9Hm7kPfzo7O/Px2dsIo5Povbg+ezye9rq6us9yOSsYyrjdblFSUiKGh4fpqdzl5WXur7tyvlHvNhoMdwyKNgJkBBa+gf4MrnJc17HhPwL0Ib8fCkbqQCgZghg7J8fNets9BIWbAfKYC2ZnZ4uMjAyGi5idnRU+n8+Dd4/a29vzAXgRIlnBYWamqOq4rUB6mKKiIpGZmbmjR1JSkqDyo6OjAlDVfKECs7GxIZgc/G1A3pj1toUcYE5LzwTDyMVTU1O1Tc8wUoWhAZjp0H4g07XIb5n1tnkIMEVcBJlIpKenm60nCFVWVibi4+N3spmRMD1DGGY4tF8I20tI20tGsvox2zwUFxf3mgsjE2mpFoD6dQLuGX4yNQe88D8YwJxrbGz8ZiQbPGYbUE1NzZ/o6OgLPARpVZ4fVlDBisjncGD4DdsPVtRjx5CeB5DFDnOf8BzhnlFp4cJwDbWVVLTxy/jLE9ZkWvyresoOGK5pOxDOmDZ45xr3SExMjDIU954/m1Gvt6p7hsL6tl006UfCuCcMpt8kTEVFhSgtLRWTk5NicXFRu5j9eMgaNcIzWfAAhkFOVFZWir6+vg9GslZjxl+3mmHyLhgmJydHk6TVe3t7xcrKinb2hNpTc3NzWkIB1F+cO6f0tZ/J0gHDtnjIDIYr0fJ5eXnKnoqNjRXcTzCEG1BueInHgXILew9ZwUgt+BuHIaS6p9LS0uTUMnmj2ocFpAIjFeE+QjrXHkOdU/CMnLY9QT4p9HsG2g0MqmzR39+vhRKSwotQh+/MzIymOuQ+KTAEiOwJaK8wWPk50nENf06bQU1PT4upqSlmw1XIPwvQVuFh10DhwDQ1Nd2iTjx8jaAIMzY2JtW+09DQ8F0+qPa7Stt2wOgV05dJrNJ5uLKhVLoPmFa9rOq9MpDdMFJBQq2trb3DcxbHEGrNCMsn8v1ueyWg/YKRyvb09BxaXV29As+MwTODcnwvfUgg/DOjFWn0nixnZAVgtJg+m+H9c7lnjGT3a8wSqKur6yx+0wzAci7WZpEOQyNZZjnAVMM7rvLy8gMBExIIAlqFqStFOCegRUKY6RWy9BAEv1B4fHxcP2fnPtJgqJglEFJoG64lAg0OBiafSIQhkGVSoAD+33YV++gVLm9hYaHgxR9hQ0NDWm0Gkf+SzaibUQsJxEl+qBeASpQfgedYEj/FIdgsxyKhVwKiooDKBRBrseO4fEjlL+vr6z/wndMcCzgWcCzgWMCxgGOBbQv8A9futsRv4eXoAAAAAElFTkSuQmCC) center center no-repeat;background-size:25px}.grad-wrapper[data-v-686735cf]{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:10px 10px 0}.grad-wrapper .grad-bar[data-v-686735cf]{border:1px solid #aaaaaa;border-radius:8px;height:12px;width:150px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC);background-size:auto 100%;display:absolute}.degree[data-v-686735cf]{border:1px solid #aaaaaa;border-radius:50%;width:20px;height:20px}.picker-deg[data-v-686735cf]{border:1px solid #aaaaaa;border-radius:5px;width:8px;height:8px;background:#cccccc}.huebar-wrapper[data-v-686735cf]{margin:10px;display:flex;flex-direction:row;justify-content:space-between;align-items:center}.huebar-wrapper .bar-wrapper[data-v-686735cf]{display:flex;flex-direction:column;justify-content:space-between;gap:5px}.huebar-wrapper .hue-bar[data-v-686735cf],.huebar-wrapper .opacity-bar[data-v-686735cf]{border:1px solid #aaaaaa;border-radius:8px;width:150px;height:12px}.huebar-wrapper .hue-bar[data-v-686735cf]{background:linear-gradient(to right,#f00 0%,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,#f00 100%)}.huebar-wrapper .opacity-bar[data-v-686735cf]{background-image:linear-gradient(to right,rgba(255,255,255,0) 0%,rgb(255,255,255) 100%),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC);background-size:auto 100%}.preview-wrapper[data-v-686735cf]{width:30px;height:30px;border-radius:50%;border:1px solid #aaaaaa;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC);background-size:50% 50%}.preview-color[data-v-686735cf]{width:28px;height:28px;border-radius:50%}\n')();
+var ColorPicker_vue_vue_type_style_index_0_scoped_true_lang = /* @__PURE__ */ (() => '.flex-row[data-v-0a91b1e8]{display:flex;flex-direction:row;align-items:center}.flex-column[data-v-0a91b1e8]{display:flex;flex-direction:column;align-items:center}.cbtn[data-v-0a91b1e8]{border:1px solid #dcdfe6;background:#ffffff;border-radius:4px;width:40px;height:40px;padding:6px}.cbtn-inner[data-v-0a91b1e8]{background:#dcdfe6;width:100%;height:100%}.panel[data-v-0a91b1e8]{position:absolute;background:#fff;top:45px;left:0;width:240px;border:1px solid #dcdfe6;border-radius:6px;z-index:1000}.panel[data-v-0a91b1e8]:before{content:"";display:block;position:absolute;top:-6px;left:10px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #dcdfe6}.panel[data-v-0a91b1e8]:after{content:"";display:block;position:absolute;top:-5px;left:10px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:6px solid #ffffff}.activeMode-wrapper[data-v-0a91b1e8]{border-bottom:1px solid #dcdfe6;height:40px;display:flex;flex-direction:row;align-items:center;padding-left:12px}.btn-activeMode[data-v-0a91b1e8]{border:1px solid #ff7d3a;margin-right:12px;border-radius:50%;width:14px;height:14px;cursor:pointer}.btn-activeMode.solid[data-v-0a91b1e8]{background:#ffc9b6}.btn-activeMode.solid.gray[data-v-0a91b1e8]{border:1px solid #7d7d7d;background:#e2e2e2}.btn-activeMode.linear[data-v-0a91b1e8]{background:linear-gradient(180deg,#ffc9b6,#ff5011)}.btn-activeMode.linear.gray[data-v-0a91b1e8]{border:1px solid #7d7d7d;background:linear-gradient(180deg,#ffffff,#999999)}.btn-activeMode.radial[data-v-0a91b1e8]{background-image:radial-gradient(circle,#ffc9b6,#ff5011)}.btn-activeMode.radial.gray[data-v-0a91b1e8]{border:1px solid #7d7d7d;background:radial-gradient(circle,#ffffff,#999999)}.palette-wrapper[data-v-0a91b1e8]{margin:10px;height:140px;position:relative;border:1px solid #dcdfe6;border-radius:4px}.palette[data-v-0a91b1e8]{position:absolute;overflow:hidden;inset:0px;border-radius:4px;background:rgb(255,0,0)}.palette .white[data-v-0a91b1e8]{position:absolute;inset:0px;background:linear-gradient(to right,#fff,rgba(255,255,255,0))}.palette .black[data-v-0a91b1e8]{position:absolute;inset:0px;background:linear-gradient(to top,#000,rgba(0,0,0,0))}.picker[data-v-0a91b1e8]{position:absolute;width:14px;height:14px;top:-4px;left:-4px}.picker[data-v-0a91b1e8]:before{content:"";top:3px;left:3px;position:absolute;width:6px;height:6px;display:block;background:rgba(255,255,255,0);box-shadow:0 0 0 1px #979797,0 0 0 3px #fff,0 0 0 4px #979797;border-radius:50%;cursor:default}.picker.on[data-v-0a91b1e8]:before{box-shadow:0 0 0 1px #979797,0 0 0 3px #f50,0 0 0 4px #979797}.dropper[data-v-0a91b1e8]{width:25px;height:30px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAyCAYAAAATIfj2AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAANKADAAQAAAABAAAAMgAAAADS/xijAAAEnklEQVRoBe2Yz0sVURTH73u+J/4WDX+kaIJmCGlKUrTqF4WbpD9Ac6H5A6KCiGwRBS6yVtnGH+DC2rU0F0KUtTSMRAPJDKmHpUiKPxea2vc7vivzHjPzrr6RnjAXxjtz59y553POueeepxBOcyzgWMCxgGOBA2QBVyTp2t3dnbi+vv4AOp336/U+ISGhpaqqalFVz4gB6ujoOLq1tfUGih/RK+9yuX56vd7LtbW1X/XjZvcRAeSHeQ8ls5KTk0VBQYGm78TEhFhYWBCA+g2o8ypQ/x1ID5OSkiKKi4tFVFSUBrS5uSlGRkbE/Pw8oX4i/IpDhZ9Hm7kPfzo7O/Px2dsIo5Povbg+ezye9rq6us9yOSsYyrjdblFSUiKGh4fpqdzl5WXur7tyvlHvNhoMdwyKNgJkBBa+gf4MrnJc17HhPwL0Ib8fCkbqQCgZghg7J8fNets9BIWbAfKYC2ZnZ4uMjAyGi5idnRU+n8+Dd4/a29vzAXgRIlnBYWamqOq4rUB6mKKiIpGZmbmjR1JSkqDyo6OjAlDVfKECs7GxIZgc/G1A3pj1toUcYE5LzwTDyMVTU1O1Tc8wUoWhAZjp0H4g07XIb5n1tnkIMEVcBJlIpKenm60nCFVWVibi4+N3spmRMD1DGGY4tF8I20tI20tGsvox2zwUFxf3mgsjE2mpFoD6dQLuGX4yNQe88D8YwJxrbGz8ZiQbPGYbUE1NzZ/o6OgLPARpVZ4fVlDBisjncGD4DdsPVtRjx5CeB5DFDnOf8BzhnlFp4cJwDbWVVLTxy/jLE9ZkWvyresoOGK5pOxDOmDZ45xr3SExMjDIU954/m1Gvt6p7hsL6tl006UfCuCcMpt8kTEVFhSgtLRWTk5NicXFRu5j9eMgaNcIzWfAAhkFOVFZWir6+vg9GslZjxl+3mmHyLhgmJydHk6TVe3t7xcrKinb2hNpTc3NzWkIB1F+cO6f0tZ/J0gHDtnjIDIYr0fJ5eXnKnoqNjRXcTzCEG1BueInHgXILew9ZwUgt+BuHIaS6p9LS0uTUMnmj2ocFpAIjFeE+QjrXHkOdU/CMnLY9QT4p9HsG2g0MqmzR39+vhRKSwotQh+/MzIymOuQ+KTAEiOwJaK8wWPk50nENf06bQU1PT4upqSlmw1XIPwvQVuFh10DhwDQ1Nd2iTjx8jaAIMzY2JtW+09DQ8F0+qPa7Stt2wOgV05dJrNJ5uLKhVLoPmFa9rOq9MpDdMFJBQq2trb3DcxbHEGrNCMsn8v1ueyWg/YKRyvb09BxaXV29As+MwTODcnwvfUgg/DOjFWn0nixnZAVgtJg+m+H9c7lnjGT3a8wSqKur6yx+0wzAci7WZpEOQyNZZjnAVMM7rvLy8gMBExIIAlqFqStFOCegRUKY6RWy9BAEv1B4fHxcP2fnPtJgqJglEFJoG64lAg0OBiafSIQhkGVSoAD+33YV++gVLm9hYaHgxR9hQ0NDWm0Gkf+SzaibUQsJxEl+qBeASpQfgedYEj/FIdgsxyKhVwKiooDKBRBrseO4fEjlL+vr6z/wndMcCzgWcCzgWMCxgGOBbQv8A9futsRv4eXoAAAAAElFTkSuQmCC) center center no-repeat;background-size:25px}.grad-wrapper[data-v-0a91b1e8]{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:10px 10px 0}.grad-wrapper .grad-bar[data-v-0a91b1e8]{border:1px solid #aaaaaa;border-radius:8px;height:12px;width:150px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC);background-size:auto 100%;display:absolute}.grad-wrapper .grad-bar.full-width[data-v-0a91b1e8]{width:100%}.degree[data-v-0a91b1e8]{border:1px solid #aaaaaa;border-radius:50%;width:20px;height:20px}.picker-deg[data-v-0a91b1e8]{border:1px solid #aaaaaa;border-radius:5px;width:8px;height:8px;background:#cccccc}.huebar-wrapper[data-v-0a91b1e8]{margin:10px;display:flex;flex-direction:row;justify-content:space-between;align-items:center}.huebar-wrapper .bar-wrapper[data-v-0a91b1e8]{display:flex;flex-direction:column;justify-content:space-between;gap:5px}.huebar-wrapper .hue-bar[data-v-0a91b1e8],.huebar-wrapper .opacity-bar[data-v-0a91b1e8]{border:1px solid #aaaaaa;border-radius:8px;width:150px;height:12px}.huebar-wrapper .hue-bar[data-v-0a91b1e8]{background:linear-gradient(to right,#f00 0%,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,#f00 100%)}.huebar-wrapper .opacity-bar[data-v-0a91b1e8]{background-image:linear-gradient(to right,rgba(255,255,255,0) 0%,rgb(255,255,255) 100%),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC);background-size:auto 100%}.preview-wrapper[data-v-0a91b1e8]{width:30px;height:30px;border-radius:50%;border:1px solid #aaaaaa;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAAAM0lEQVQ4EWM8cuTIfwY8wMbGhhGPNAMTPkli5EYNYBgEgYg3jkHRSCidjEbjYIhGimMBAKIWB2rXs92IAAAAAElFTkSuQmCC);background-size:50% 50%}.preview-color[data-v-0a91b1e8]{width:28px;height:28px;border-radius:50%}\n')();
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -100,7 +100,7 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _withScopeId = (n) => (pushScopeId("data-v-686735cf"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-0a91b1e8"), n = n(), popScopeId(), n);
 const _hoisted_1 = { onselectstart: "return false" };
 const _hoisted_2 = ["onContextmenu"];
 const _hoisted_3 = { class: "activeMode-wrapper" };
@@ -204,6 +204,7 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
     let isDragging = false;
     let paletteWidth = 216;
     let paletteHeight = 138;
+    let gradBarWidth = props.showDegreePicker ? 150 : paletteWidth;
     let barWidth = 150;
     let gradMaxId = 0;
     let eyeDropper = null;
@@ -235,7 +236,9 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
       activeMode.value = mode;
       if (activeMode.value !== "solid") {
         setGradPickerPos();
-        setDegreeHanderPos();
+        if (props.showDegreePicker.value) {
+          setDegreePickerPos();
+        }
         const c = gradColors.value[activeGradPickerIndex.value].color;
         paletteColor.h = c.h;
         paletteColor.s = c.s;
@@ -338,9 +341,9 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
     function getGradPickerPos(el, index) {
       const elPos = getElPos(gradBarEl.value);
       const mousePos = getMousePos();
-      let left = Math.max(-3, Math.min(barWidth - 12, mousePos.x - elPos.left - 6));
+      let left = Math.max(-3, Math.min(gradBarWidth - 12, mousePos.x - elPos.left - 6));
       el.style.left = left + "px";
-      gradColors.value[index].percent = (left + 3) / (barWidth - 9) * 100;
+      gradColors.value[index].percent = (left + 3) / (gradBarWidth - 9) * 100;
       activeGradPickerIndex.value = index;
       const c = gradColors.value[index].color;
       paletteColor.h = c.h;
@@ -353,7 +356,7 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
     }
     function setGradPickerPos() {
       gradColors.value.forEach((item, index) => {
-        gradBarEl.value.children[index].style.left = (barWidth - 9) / 100 * item.percent - 3 + "px";
+        gradBarEl.value.children[index].style.left = (gradBarWidth - 9) / 100 * item.percent - 3 + "px";
       });
     }
     function updateGradColor() {
@@ -419,17 +422,6 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
       degree.value = deg;
       updateGradColor();
       updatePreviews();
-    }
-    function setDegreeHanderPos() {
-      const r = 10;
-      const bar_r = 4;
-      let deg = degree.value;
-      if (deg - 360 < 0) {
-        deg -= 360;
-      }
-      const rad = -(deg - 90) * (Math.PI / 180);
-      degreePickerEl.value.style.left = Math.cos(rad) * r + bar_r + 1 + "px";
-      degreePickerEl.value.style.top = -Math.sin(rad) * r + bar_r + 1 + "px";
     }
     function getPalettePickerPos() {
       const elPos = getElPos(paletteEl.value);
@@ -514,7 +506,7 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
             style: normalizeStyle(activeMode.value === "solid" ? "display:none" : "")
           }, [
             createElementVNode("div", {
-              class: "grad-bar",
+              class: normalizeClass(["grad-bar", { "full-width": !__props.showDegreePicker }]),
               ref_key: "gradBarEl",
               ref: gradBarEl,
               style: normalizeStyle({ backgroundImage: gradPreviewColor.value }),
@@ -529,10 +521,11 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
                   onMousedown: withModifiers(($event) => bindDown($event.target, getGradPickerPos, index), ["stop"])
                 }, null, 42, _hoisted_5);
               }), 128))
-            ], 4),
-            createElementVNode("div", {
+            ], 6),
+            __props.showDegreePicker ? (openBlock(), createElementBlock("div", {
+              key: 0,
               class: "flex-row",
-              style: normalizeStyle(activeMode.value === "linear" && __props.showDegreePicker ? "" : "visibility:hidden")
+              style: normalizeStyle(activeMode.value === "linear" ? "" : "visibility:hidden")
             }, [
               createElementVNode("div", {
                 class: "degree",
@@ -549,7 +542,7 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
                 }, null, 544)
               ], 40, _hoisted_6),
               createElementVNode("div", _hoisted_7, toDisplayString(degree.value) + "\xB0", 1)
-            ], 4)
+            ], 4)) : createCommentVNode("", true)
           ], 4),
           createElementVNode("div", _hoisted_8, [
             createElementVNode("div", {
@@ -623,5 +616,5 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
     };
   }
 });
-var ColorPicker = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-686735cf"]]);
+var ColorPicker = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-0a91b1e8"]]);
 export { ColorPicker as default };
