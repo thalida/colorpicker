@@ -18,7 +18,7 @@
             :class="index == activeGradPickerIndex ? 'on' : ''" @click.stop="getGradPickerPos($event.target, index)"
             @mousedown.stop="bindDown($event.target, getGradPickerPos, index)"></div>
         </div>
-        <div class="flex-row" :style="activeMode === 'linear' ? '' : 'visibility:hidden'">
+        <div class="flex-row" :style="activeMode === 'linear' && showDegreePicker ? '' : 'visibility:hidden'">
           <div class="degree" ref="degreeEl" @click.stop="getDegreePickerPos"
             @mousedown.stop="bindDown($event, getDegreePickerPos)">
             <div class="picker-deg" ref="degreePickerEl" @mousedown.stop="bindDown($event, getDegreePickerPos)"></div>
@@ -101,6 +101,11 @@ const props = defineProps({
     default: () => ['solid', 'linear', 'radial'],
   },
   showOpacityPicker: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
+  showDegreePicker: {
     type: Boolean,
     required: false,
     default: true,
