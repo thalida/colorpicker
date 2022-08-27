@@ -145,9 +145,15 @@ const activeMode = ref(props.mode)
 
 let g = []
 const gradColors = ref(g)
-props.gradients.forEach((item, index) => {
-  g.push({ id: index, percent: item.percent, color: Utils.rgba2hsba(item.color) })
-})
+
+if (props.gradients.length > 0) {
+  props.gradients.forEach((item, index) => {
+    g.push({ id: index, percent: item.percent, color: Utils.rgba2hsba(item.color) })
+  })
+} else if (props.color) {
+  g.push({ id: 0, percent: 0, color: Utils.rgba2hsba(props.color) })
+  g.push({ id: 1, percent: 100, color: Utils.rgba2hsba({ r: 0, g: 0, b: 0, a: 1 }) })
+}
 gradColors.value = g
 if (g.length > 0) {
   gradColors.value[gradColors.value.length - 1].id

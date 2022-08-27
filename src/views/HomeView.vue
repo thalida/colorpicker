@@ -5,6 +5,9 @@
       @colorChanged="changed" :showOpacityPicker="false" />
     <ColorPicker ref="colorPickerRef" style="margin: 50px" mode="solid" :supportedModes="['linear', 'solid']"
       :degree="45" :gradients="g" @colorChanged="changed" :showOpacityPicker="false" />
+    <ColorPicker ref="colorPickerRef" style="margin: 50px" mode="solid" :supportedModes="['linear', 'solid']"
+      :degree="45" :color="{ r: 255, g: 255, b: 0, a: 1 }" :gradients="[]" @colorChanged="changed"
+      :showOpacityPicker="false" />
     <ColorPicker style="margin: 50px" mode="solid" :supportedModes="['solid', 'linear']" :degree="45" :gradients="g"
       @colorChanged="changed" :showOpacityPicker="false" :showDegreePicker="false" :showPanelOnly="true" />
   </div>
